@@ -1,3 +1,45 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+<script src="https://github.com/daneden/animate.css"></script>
+
+
+<script>
+//when code has loaded doc is opened
+  $(document).ready(function() {
+  //adds a class to seletor (eg. button)
+     $("button").addClass("animated bounce");
+  //removes a class from selector
+     $("button").removeClass("btn-default");
+  //adds css to selector
+     $("#target1").css("color", "blue");
+   //adds property to selector
+     $("button").prop("disabled", true);
+   //edits html of selector
+     $("h3").html("<em>jQuery Playground</em>");
+   //edits text of selector as is not code or html
+     $("h3").text("<em>jQuery Playground</em>");
+   //removes html selector
+     $("#target4").remove();
+  //moving elements from one div to another.
+     $("#target4").appendTo("#left-well");
+  //makes a copy of an element
+      $("#target2").clone().appendTo("#right-well");
+  //allows you to access the parent of whichever element you've selected.
+      $("#left-well").parent().css("background-color", "blue");
+  //allows you to access the children of whichever element you've selected.
+      $("#left-well").children().css("color", "blue");
+  //allows you to select all the nth elements with the target class or element type.
+      $(".target:nth-child(3)").addClass("animated bounce");
+  //target all the odd-numbered elements 
+      $(".target:odd").addClass("animated shake");
+  //selecting all the even-numbered elements 
+      $(".target:even").addClass("animated shake");
+      
+  });
+</script>
+
+
 <!-- Only change code above this line. -->
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
